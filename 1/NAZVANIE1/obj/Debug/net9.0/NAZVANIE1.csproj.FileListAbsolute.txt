@@ -1,0 +1,17 @@
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\bin\Debug\net9.0\NAZVANIE1.exe
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\bin\Debug\net9.0\NAZVANIE1.deps.json
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\bin\Debug\net9.0\NAZVANIE1.runtimeconfig.json
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\bin\Debug\net9.0\NAZVANIE1.dll
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\bin\Debug\net9.0\NAZVANIE1.pdb
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\bin\Debug\net9.0\HtmlAgilityPack.dll
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\obj\Debug\net9.0\NAZVANIE1.csproj.AssemblyReference.cache
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\obj\Debug\net9.0\NAZVANIE1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\obj\Debug\net9.0\NAZVANIE1.AssemblyInfoInputs.cache
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\obj\Debug\net9.0\NAZVANIE1.AssemblyInfo.cs
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\obj\Debug\net9.0\NAZVANIE1.csproj.CoreCompileInputs.cache
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\obj\Debug\net9.0\NAZVANIE1.csproj.Up2Date
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\obj\Debug\net9.0\NAZVANIE1.dll
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\obj\Debug\net9.0\refint\NAZVANIE1.dll
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\obj\Debug\net9.0\NAZVANIE1.pdb
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\obj\Debug\net9.0\NAZVANIE1.genruntimeconfig.cache
+C:\Users\1etmehear\RiderProjects\NAZVANIE1\NAZVANIE1\obj\Debug\net9.0\ref\NAZVANIE1.dll
