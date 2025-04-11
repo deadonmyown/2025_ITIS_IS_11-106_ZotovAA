@@ -28,8 +28,11 @@ class WebCrawler
 
     private bool IsValidUrl(string url)
     {
+        // Удаляем якорь из URL
+        var urlWithoutAnchor = url.Split('#')[0];
+        
         // Проверяем, что URL валиден и не является файлом (например, .pdf)
-        if (!Uri.TryCreate(url, UriKind.Absolute, out var uri))
+        if (!Uri.TryCreate(urlWithoutAnchor, UriKind.Absolute, out var uri))
             return false;
 
         if (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps)
@@ -90,15 +93,13 @@ class WebCrawler
 
     private bool SavePage(string url, string text)
     {
-        var words = text.Split(new[] { ' ', '\t', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+        // Используем регулярное выражение для поиска русских слов
+        var russianWords = Regex.Matches(text, @"\b[а-яА-ЯёЁ]+\b");
+        var wordCount = russianWords.Count;
         
-        // foreach(var word in words)
-        Console.WriteLine(words.Length);
-        
-        var wordCount = words.Length;
         if (wordCount < _minWords)
         {
-            Console.WriteLine($"Страница {url} содержит менее {_minWords} слов");
+            Console.WriteLine($"Страница {url} содержит менее {_minWords} русских слов = {wordCount}");
             return false;
         }
 
@@ -109,7 +110,7 @@ class WebCrawler
 
         File.AppendAllText(IndexFile, $"{_pagesDownloaded}\t{url}{Environment.NewLine}", Encoding.UTF8);
 
-        Console.WriteLine($"Страница сохранена {_pagesDownloaded}: {url}");
+        Console.WriteLine($"Страница сохранена {_pagesDownloaded}: {url} (найдено {wordCount} русских слов)");
         return true;
     }
 
