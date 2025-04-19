@@ -54,7 +54,7 @@ class SearchEngine:
     def parse_query(self, query: str) -> List[str]:
         """Парсинг запроса и преобразование в постфиксную нотацию"""
         # Заменяем русские операторы на английские
-        query = query.replace('И', '&').replace('ИЛИ', '|').replace('НЕ', '!')
+        query = query.replace('ИЛИ', '|').replace('И', '&').replace('НЕ', '!')
         
         # Разбиваем запрос на токены
         tokens = re.findall(r'[&\|!]|\w+', query)
