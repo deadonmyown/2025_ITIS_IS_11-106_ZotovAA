@@ -126,7 +126,7 @@ class SearchEngine:
 
 def main():
     # Путь к директории с обработанными документами
-    processed_docs_dir = "D:\\Repositories\\ITIS\\2025_ITIS_IS_11-106_ZotovAA\\2\\processed_documents"
+    processed_docs_dir = "D:\\Repositories\\2025_ITIS_IS_11-106_ZotovAA\\2\\processed_documents"
     
     # Создаем экземпляр поисковой системы
     search_engine = SearchEngine(processed_docs_dir)
@@ -139,7 +139,7 @@ def main():
     search_engine.print_index_stats()
     
     # Сохраняем индекс в файл
-    index_file = "D:\\Repositories\\ITIS\\2025_ITIS_IS_11-106_ZotovAA\\3\\inverted_index.json"
+    index_file = "D:\\Repositories\\2025_ITIS_IS_11-106_ZotovAA\\3\\inverted_index.json"
     search_engine.save_index(index_file)
     print(f"\nИнвертированный индекс сохранен в файл {index_file}")
     
