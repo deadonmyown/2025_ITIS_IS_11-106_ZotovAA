@@ -46,7 +46,7 @@ def calculate_idf(inverted_index, total_docs):
     idf_data = {}
     for term, doc_ids in inverted_index.items():
         df = len(set(doc_ids))
-        idf_data[term] = round(math.log(total_docs / (1 + df)),6)
+        idf_data[term] = round(math.log((1 + total_docs) / (1 + df)),6)
     return idf_data
 
 
