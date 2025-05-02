@@ -4,11 +4,11 @@ import math
 import json
 from collections import defaultdict
 
-inverted_index_path = "D:\\Repositories\\2025_ITIS_IS_11-106_ZotovAA\\3\\inverted_index.json"
-processed_dir = "D:\\Repositories\\2025_ITIS_IS_11-106_ZotovAA\\2\\processed_documents"
-output_tf_csv = "D:\\Repositories\\2025_ITIS_IS_11-106_ZotovAA\\4\\tf_index.csv"
-output_idf_csv = "D:\\Repositories\\2025_ITIS_IS_11-106_ZotovAA\\4\\idf_index.csv"
-output_tfidf_csv = "D:\\Repositories\\2025_ITIS_IS_11-106_ZotovAA\\4\\tfidf_index.csv"
+inverted_index_path = "D:\\Repositories\\ITIS\\2025_ITIS_IS_11-106_ZotovAA\\3\\inverted_index.json"
+processed_dir = "D:\\Repositories\\ITIS\\2025_ITIS_IS_11-106_ZotovAA\\2\\processed_documents"
+output_tf_csv = "D:\\Repositories\\ITIS\\2025_ITIS_IS_11-106_ZotovAA\\4\\tf_index.csv"
+output_idf_csv = "D:\\Repositories\\ITIS\\2025_ITIS_IS_11-106_ZotovAA\\4\\idf_index.csv"
+output_tfidf_csv = "D:\\Repositories\\ITIS\\2025_ITIS_IS_11-106_ZotovAA\\4\\tfidf_index.csv"
 
 
 def load_inverted_index(file_path):

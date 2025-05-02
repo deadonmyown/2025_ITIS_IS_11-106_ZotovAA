@@ -51,6 +51,6 @@ def process_all_documents(input_dir, output_dir):
 # Пример использования
 if __name__ == "__main__":
     input_directory = "D:\\Repositories\\ITIS\\2025_ITIS_IS_11-106_ZotovAA\\1\\NAZVANIE1\\pages"  # папка с исходными документами
-    output_directory = "processed_documents"  # папка для обработанных документов
+    output_directory = "D:\\Repositories\\ITIS\\2025_ITIS_IS_11-106_ZotovAA\\2\\processed_documents"  # папка для обработанных документов
     
     process_all_documents(input_directory, output_directory)

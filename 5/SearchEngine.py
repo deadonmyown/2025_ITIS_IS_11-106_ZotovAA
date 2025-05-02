@@ -63,8 +63,8 @@ def load_idf(idf_path):
 
 
 if __name__ == "__main__":
-    tfidf_index, doc_ids = load_tfidf_index("D:\\Repositories\\2025_ITIS_IS_11-106_ZotovAA\\4\\tfidf_index.csv")
-    idf = load_idf("D:\\Repositories\\2025_ITIS_IS_11-106_ZotovAA\\4\\idf_index.csv")
+    tfidf_index, doc_ids = load_tfidf_index("D:\\Repositories\\ITIS\\2025_ITIS_IS_11-106_ZotovAA\\4\\tfidf_index.csv")
+    idf = load_idf("D:\\Repositories\\ITIS\\2025_ITIS_IS_11-106_ZotovAA\\4\\idf_index.csv")
     while True:
         query = input("Введите запрос (чтобы выйти введите 'exit'): ")
         if query.lower() == "exit":

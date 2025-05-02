@@ -28,11 +28,8 @@ class WebCrawler
 
     private bool IsValidUrl(string url)
     {
-        // Удаляем якорь из URL
-        var urlWithoutAnchor = url.Split('#')[0];
-        
         // Проверяем, что URL валиден и не является файлом (например, .pdf)
-        if (!Uri.TryCreate(urlWithoutAnchor, UriKind.Absolute, out var uri))
+        if (!Uri.TryCreate(url, UriKind.Absolute, out var uri))
             return false;
 
         if (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps)
@@ -59,9 +56,12 @@ class WebCrawler
             {
                 var href = link.GetAttributeValue("href", string.Empty);
                 var absoluteUrl = new Uri(new Uri(url), href).AbsoluteUri;
+                
+                // Удаляем якорь из URL
+                var urlWithoutAnchor = absoluteUrl.Split('#')[0];
 
-                if (IsValidUrl(absoluteUrl))
-                    links.Add(absoluteUrl);
+                if (IsValidUrl(urlWithoutAnchor))
+                    links.Add(urlWithoutAnchor);
             }
 
             return links;
@@ -153,7 +153,8 @@ class WebCrawler
         client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0");
         client.Timeout = TimeSpan.FromSeconds(10);
 
-        var currentLevelUrls = new HashSet<string>(_startUrls);
+        // Обрабатываем начальные URL, удаляя якоря
+        var currentLevelUrls = new HashSet<string>(_startUrls.Select(url => url.Split('#')[0]));
         var nextLevelUrls = new HashSet<string>();
 
         while (_pagesDownloaded < _minPages && currentLevelUrls.Count > 0)
