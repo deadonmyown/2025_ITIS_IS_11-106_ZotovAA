@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ug/rok3RS6U=",
+  "dgSpecHash": "r9eHfgInzFg=",
   "success": true,
-  "projectFilePath": "D:\\Repositories\\ITIS\\2025_ITIS_IS_11-106_ZotovAA\\1\\NAZVANIE1\\NAZVANIE1.csproj",
+  "projectFilePath": "D:\\Repositories\\2025_ITIS_IS_11-106_ZotovAA\\1\\NAZVANIE1\\NAZVANIE1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\1etmehear\\.nuget\\packages\\htmlagilitypack\\1.12.0\\htmlagilitypack.1.12.0.nupkg.sha512"
+    "C:\\Users\\xPr1e\\.nuget\\packages\\htmlagilitypack\\1.12.0\\htmlagilitypack.1.12.0.nupkg.sha512"
   ],
   "logs": []
 }

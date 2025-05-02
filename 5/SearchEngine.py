@@ -38,7 +38,7 @@ def search(query, tfidf_index, idf, doc_ids, top_k=10):
         if score > 0:
             results.append((doc_id, score))
     results.sort(key=lambda x: x[1], reverse=True)
-    return results[:top_k]
+    return results
 
 def load_tfidf_index(tfidf_path):
     tfidf_index = defaultdict(dict)

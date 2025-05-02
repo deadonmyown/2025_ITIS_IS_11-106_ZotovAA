@@ -51,6 +51,10 @@ class SearchEngine:
         for i, (term, docs) in enumerate(list(self.inverted_index.items())[:10]):
             print(f"{term}: встречается в {len(docs)} документах")
     
+    def get_doc_number(self, doc_id: str) -> int:
+        """Извлекает номер документа из его идентификатора"""
+        return int(doc_id.split('_')[2].split('.')[0])
+    
     def parse_query(self, query: str) -> List[str]:
         """Парсинг запроса и преобразование в постфиксную нотацию"""
         # Заменяем русские операторы на английские
@@ -166,7 +170,8 @@ def main():
             print(f"\nЗапрос: {query}")
             print(f"Найдено документов: {len(results)}")
             if results:
-                print("Документы:", sorted(results))
+                doc_numbers = sorted([search_engine.get_doc_number(doc) for doc in results])
+                print("Документы:", doc_numbers)
         except ValueError as e:
             print(f"Ошибка в запросе '{query}': {str(e)}")
     
@@ -181,7 +186,8 @@ def main():
             results = search_engine.evaluate_query(query)
             print(f"Найдено документов: {len(results)}")
             if results:
-                print("Документы:", sorted(results))
+                doc_numbers = sorted([search_engine.get_doc_number(doc) for doc in results])
+                print("Документы:", doc_numbers)
         except ValueError as e:
             print(f"Ошибка в запросе: {str(e)}")
 
